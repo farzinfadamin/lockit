@@ -12,4 +12,16 @@ $(document).ready(function(){
        }
     });
 
+  var $modalBox = $('.modal-notify');
+  var $closeBtn = $('.modal-box .close');
+  $('.btn-notify').on('click', function(){
+    $modalBox.addClass('show');
+    $modalBox.find('.get-email').addClass('active');
+  })
+
+  $closeBtn.on('click', function(){
+    $modalBox.removeClass('show');
+    $modalBox.children().removeClass('active');
+  })
+
 })
