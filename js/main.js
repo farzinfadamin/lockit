@@ -19,10 +19,12 @@ var lockit = function(){
       
       $thankyou = $('.thankyou'),
 
-      $window.on('scroll.lazyload', $.proxy(this.onScroll, this) );
+      $window.on('scroll.lazyload, touchmove.lazyload', $.proxy(this.onScroll, this) );
 
       $window.on('scroll', function(){
-        $window.trigger('scroll.lazyload');
+       $window
+         .trigger('scroll.lazyload')
+         .trigger('touchmove.lazyload');
       });
 
       
@@ -35,12 +37,13 @@ var lockit = function(){
     },
 
     onScroll: function(){
-      
+      console.log($window.scrollTop());
+
       var scrollTop = $window.scrollTop(),
-          $sections = $('[class ^=section-]:not(.active');
+          $sections = $('[class ^=section-]:not(.active)');
 
       if( ! $sections.length){
-        $window.off('scroll.lazyload');
+        $window.off('scroll.lazyload ,touchmove.lazyload');
       }
 
 
@@ -101,7 +104,12 @@ var lockit = function(){
     },
 
     invalidEmail: function(){
-      $('.notify-form').addClass('error');
+
+      if($('.get-email.active').length){
+        $('.get-email.active').find('form').addClass('error');
+      }else{
+        $('.section-notify').find('form').addClass('error');
+      }
     },
 
     emailSent: function(){
@@ -115,10 +123,10 @@ var lockit = function(){
 
 $(document).ready(function(){
 
-	$('.lk-handiphone').addClass('show');
-	$('.lk-bnr-details').addClass('show')
+  $('.lk-handiphone').addClass('show');
+  $('.lk-bnr-details').addClass('show')
 
-	$(window).bind('scroll', function() {
+  $(window).bind('scroll', function() {
       if ($(window).scrollTop() > 100) {
         $('.lk-header-topbar').addClass('fixed');
        }
@@ -129,12 +137,17 @@ $(document).ready(function(){
 
   var $modalBox = $('.modal-notify');
   var $closeBtn = $('.modal-box .close');
-  $('.btn-notify').on('click', function(){
+  var notifyEvent = 'click';
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+   notifyEvent = 'touchstart';
+  }
+
+  $('.btn-notify').on(notifyEvent, function(){
     $modalBox.addClass('show');
     $modalBox.find('.get-email').addClass('active');
   })
 
-  $closeBtn.on('click', function(){
+  $closeBtn.on(notifyEvent, function(){
     $modalBox.removeClass('show');
     $modalBox.children().removeClass('active');
   });
