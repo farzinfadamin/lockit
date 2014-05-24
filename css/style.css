@@ -71,30 +71,9 @@ img {
 /* ==========================================================================
    Farzin Fadamin custom styles
    ========================================================================== */
-
-@font-face {
-    font-family: 'HelveticaNeueLight';
-    src: url('fonts/helveticaneuelight.eot');
-    src: url('fonts/helveticaneuelight.eot') format('embedded-opentype'),
-         url('fonts/helveticaneuelight.svg#HelveticaNeueLight') format('svg'),
-         url('fonts/helveticaneuelight.woff') format('woff'),
-         url('fonts/helveticaneuelight.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'HelveticaNeueThin';
-    src: url('fonts/helveticaneuethin.eot');
-    src: url('fonts/helveticaneuethin.eot') format('embedded-opentype'),
-         url('fonts/helveticaneuethin.svg#HelveticaNeueThin') format('svg'),
-         url('fonts/helveticaneuethin.woff') format('woff'),
-         url('fonts/helveticaneuethin.ttf') format('truetype');
-}
-
-
-
    
 body {
-    font: 14px/26px 'HelveticaNeueLight', Arial, sans-serif;
+    font: 14px/26px 'Helvetica Neue', Helvetica ,Arial, sans-serif;
     background: #f7f7f7;
     color: #333;
     min-width: 320px;
