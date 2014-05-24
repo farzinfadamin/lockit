@@ -73,7 +73,9 @@ img {
    ========================================================================== */
    
 body {
-    font: 14px/26px 'Helvetica Neue', Helvetica ,Arial, sans-serif;
+    font: 14px/26px "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-weight:300;
+    font-stretch:normal;
     background: #f7f7f7;
     color: #333;
     min-width: 320px;
@@ -196,7 +198,7 @@ a.btn-notify i{
 }
 
 .lk-bnr-details{
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     text-shadow: 0 1px 2px rgba(0,0,0,.3);
 }
@@ -211,9 +213,17 @@ a.btn-notify i{
 .lk-bnr-details h3{
     margin: 0 0 .8em;
     font-size: 2.2em;
-    font-weight: 300;
     text-transform: uppercase;
-	font-family: 'HelveticaNeueThin';
+    font-weight:200;
+    font-stretch:normal;
+    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+}
+
+.lk-bnr-details p{
+    font-size: 1.4em;
+    font-weight: 200;
+    font-stretch: normal;
+    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
 }
 
 .lk-bnr-details h2,
@@ -244,7 +254,6 @@ a.btn-notify i{
     -moz-transform: translateY(100px);
     -o-transform: translateY(100px);
     transform: translateY(100px);
-	font-family: 'HelveticaNeueThin';
 }
 
 .lk-bnr-details.show h2,
@@ -657,10 +666,11 @@ a.btn-notify i{
     -moz-border-radius: 5px;
     border-radius: 5px;
     position: absolute;
-    width: 600px;
-    left: 50%;
-    top: 30%;
-    margin-left: -300px;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    top: 50%;
+    margin-top: -140px;
     box-shadow: 0 0 10px rgba(0,0,0,.6);
     -webkit-transition: all .15s ease-in-out;
     -moz-transition: all .15s ease-in-out;
@@ -712,13 +722,13 @@ a.btn-notify i{
     height: 310px;
     top: 50%;
     margin-top: -155px;
-    background: url('../img/bg-bag.jpg') no-repeat 0 0 #f7f7f7;
+    background: url('../img/bg-bag.jpg') no-repeat -100px 0 #f7f7f7;
 }
 
 .modal-box.thankyou aside{
     float: right;
-    margin-top: 50px;
-    margin-left: 250px;
+    margin-top: 10px;
+    margin-left: 100px;
     text-align: left;
 }
 
@@ -882,6 +892,22 @@ a.btn-notify i{
         -webkit-border-radius: 0 5px 5px 0;
         -moz-border-radius: 0 5px 5px 0;
         border-radius: 0 5px 5px 0;
+    }
+
+    .modal-notify .modal-box{
+        width: 600px;
+        left: 50%;
+        right: auto;
+        margin-left: -300px;
+    }
+
+    .modal-box.thankyou{
+        background-position: 0 0;
+    }
+
+    .modal-box.thankyou aside{
+        margin-top: 50px;
+        margin-left: 250px;
     }
 }
 
