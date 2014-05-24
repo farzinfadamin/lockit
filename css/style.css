@@ -346,10 +346,10 @@ a.btn-notify i{
 
 .lk-main-container aside img{
     width: 100%;
-    -webkit-transition: all .3s ease-in-out .3s;
-    -moz-transition: all .3s ease-in-out .3s;
-    -o-transition: all .3s ease-in-out .3s;
-    transition: all .3s ease-in-out .3s;
+    -webkit-transition: all .7s ease-in-out .3s;
+    -moz-transition: all .7s ease-in-out .3s;
+    -o-transition: all .7s ease-in-out .3s;
+    transition: all .7s ease-in-out .3s;
     -webkit-transform: translate(0);
     -moz-transform: translate(0);
     -o-transform: translate(0);
@@ -425,10 +425,10 @@ a.btn-notify i{
     -moz-transform: translateX(70%);
     -o-transform: translateX(70%);
     transform: translateX(70%);
-    -webkit-transition: all .4s ease-in-out .6s;
-    -moz-transition: all .4s ease-in-out .6s;
-    -o-transition: all .4s ease-in-out .6s;
-    transition: all .4s ease-in-out .6s;
+    -webkit-transition: all .7s ease-in-out .6s;
+    -moz-transition: all .7s ease-in-out .6s;
+    -o-transition: all .7s ease-in-out .6s;
+    transition: all .7s ease-in-out .6s;
 }
 
 .section-howitworks.active aside img.lockit-separated{
@@ -569,6 +569,12 @@ a.btn-notify i{
     -webkit-border-radius: 5px 5px 0 0;
     -moz-border-radius: 5px 5px 0 0;
     border-radius: 5px 5px 0 0;
+}
+
+.notify-form.error input[type="text"]{
+    background: #f8dddd;
+    border-color: #edc0c0;
+    color: #cc3333;
 }
 
 .notify-form button{
