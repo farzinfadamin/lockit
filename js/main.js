@@ -66,7 +66,7 @@ var lockit = function(){
 
     submitEmail: function(from){
 
-      var to = 'mahdi.pedram@mexo.co';
+      var to = 'farzin.fadamin@mexo.co';
 
       if(! this.validateEmail(from) ){
         console.log('invalid');
