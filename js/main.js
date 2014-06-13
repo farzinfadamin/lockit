@@ -29,7 +29,7 @@ var lockit = function(){
 
       
       $('.notify-form').on('submit', function(e){ 
-        e.preventDefault(); 
+        //e.preventDefault(); 
       });
 
       $('.notify-form button').on('click', $.proxy(this.onNotifySubmit, this));
@@ -58,7 +58,7 @@ var lockit = function(){
 
     onNotifySubmit: function(e){
 
-      var from = $.trim($('.get-email :text').val());
+      var from = $.trim($(e.currentTarget).parents('form').find(':text').val());
       
       this.submitEmail( from );      
     
@@ -67,7 +67,7 @@ var lockit = function(){
     submitEmail: function(from){
 
       var to = 'farzin.fadamin@mexo.co';
-
+      console.log(from);
       if(! this.validateEmail(from) ){
         console.log('invalid');
         this.invalidEmail();
@@ -82,7 +82,7 @@ var lockit = function(){
                 email: to
               }],
               subject: "LockIt User Subscription",
-              text: " has sunscribed to LockIT"
+              text: from + " has Subscribed to LockIT"
           }
       };
 
