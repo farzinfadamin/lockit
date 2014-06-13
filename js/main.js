@@ -66,10 +66,8 @@ var lockit = function(){
 
     submitEmail: function(from){
 
-      var to = 'farzin.fadamin@mexo.co';
-      console.log(from);
+      var to = 'info@fastenwear.com ';
       if(! this.validateEmail(from) ){
-        console.log('invalid');
         this.invalidEmail();
         return;
       }
