@@ -37,7 +37,6 @@ var lockit = function(){
     },
 
     onScroll: function(){
-      console.log($window.scrollTop());
 
       var scrollTop = $window.scrollTop(),
           $sections = $('[class ^=section-]:not(.active)');
