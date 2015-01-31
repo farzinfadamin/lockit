@@ -139,9 +139,13 @@ $(document).ready(function(){
    notifyEvent = 'touchstart';
   }
 
-  $('.btn-notify').on(notifyEvent, function(){
+  /*$('.btn-notify').on(notifyEvent, function(){
     $modalBox.addClass('show');
     $modalBox.find('.get-email').addClass('active');
+  })*/
+
+  $('.btn-orderone').on(notifyEvent, function(){
+    
   })
 
   $closeBtn.on(notifyEvent, function(){

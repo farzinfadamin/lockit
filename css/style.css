@@ -150,7 +150,7 @@ strong{
     }
 }
 
-a.btn-notify{
+a.btn-orderone{
     display: inline-block;
     border: 1px solid #fff;
     padding: 12px 20px;
@@ -166,7 +166,7 @@ a.btn-notify{
     transition: background-color 0.12s ease-in-out, color 0.12s ease-in-out;
 }
 
-a.btn-notify i{
+a.btn-orderone i{
     background: url('../img/sprite.png') no-repeat 0 -30px;
     display: inline-block;
     margin-right: 10px;
@@ -177,22 +177,22 @@ a.btn-notify i{
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) {
-    a.btn-notify i{
+    a.btn-orderone i{
         background-image: url('../img/sprite@2x.png');
         background-size: 250px 230px;
     }
 }
 
-.no-touch a.btn-notify:hover{
+.no-touch a.btn-orderone:hover{
     background: #fff;
     color: #333;
 }
 
-.no-touch a.btn-notify:hover i{
+.no-touch a.btn-orderone:hover i{
     background-position: -30px -30px;
 }
 
-.lk-header-topbar a.btn-notify,
+.lk-header-topbar a.btn-orderone,
 .lk-header .lk-handiphone{
     display: none;
 }
@@ -204,10 +204,11 @@ a.btn-notify i{
 }
 
 .lk-bnr-details h2{
-    margin: 0 0 .5em;
+    margin: 0;
     font-size: 6.25em;
     font-weight: 400;
     text-transform: uppercase;
+    line-height: 1;
 }
 
 .lk-bnr-details h3{
@@ -224,6 +225,31 @@ a.btn-notify i{
     font-weight: 200;
     font-stretch: normal;
     font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+}
+
+.lk-bnr-details .lk-bnr-text{
+    font-size: 3em;
+    text-transform: capitalize;
+    font-family: 'Allura', cursive;
+    position: relative;
+    margin-bottom: .5em;
+}
+
+.lk-bnr-details .lk-bnr-text:before,
+.lk-bnr-details .lk-bnr-text:after{
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background: #fff;
+    width: 30%;
+    content: "";
+}
+
+.lk-bnr-details .lk-bnr-text:before{
+    left: 0;
+}
+.lk-bnr-details .lk-bnr-text:after{
+    right: 0;
 }
 
 .lk-bnr-details h2,
@@ -399,8 +425,8 @@ a.btn-notify i{
     max-width: 429px;
     float: right;
     position: absolute;
-    top: 0;
-    right: 0;
+    bottom: -20px;
+    right: -50px;
     -webkit-transform: translateY(50%);
     -moz-transform: translateY(50%);
     -o-transform: translateY(50%);
@@ -420,7 +446,7 @@ a.btn-notify i{
     position: absolute;
     z-index: 2;
     left: -20px;
-    bottom: 0;
+    bottom: -70px;
     -webkit-transform: translateX(70%);
     -moz-transform: translateX(70%);
     -o-transform: translateX(70%);
@@ -464,13 +490,71 @@ a.btn-notify i{
 
 .notification-box{
     background: #dcdcdc;
-    font-size: 1.25em;
+    font-size: .875em;
     text-align: center;
     padding: 30px 0;
 }
 
 .lk-footer{
     text-align: center;
+}
+
+.lk-preorder-list{
+    margin: 20px auto;
+    float: left;
+    width: 100%;
+    list-style: none;
+}
+
+.lk-preorder-list li{
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lk-preorder-list li:last-child{
+    margin-bottom: 0;
+}
+
+.lk-preorder-list li figure{
+    margin-bottom: 10px;
+    height: 190px;
+    position: relative;
+}
+
+.lk-preorder-list li figcaption{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.lk-preorder-list a{
+    min-width: 200px;
+    padding: 10px 20px;
+    display: block;
+    background: #2CA7F6;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: #fff;
+    margin: 5px 10px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.no-touch .lk-preorder-list a:hover{
+    background: #219ae8;
+    color: #fff;
+}
+
+.lk-preorder-list small{
+    display: block;
+    line-height: 1;
 }
 
 .lk-footer .socials{
@@ -802,41 +886,41 @@ a.btn-notify i{
         background-position: 0 -160px;
     }
 
-    a.btn-notify{
+    a.btn-orderone{
         float: right;
         margin-top: 5px;
     }
 
-    .lk-header-topbar a.btn-notify{
+    .lk-header-topbar a.btn-orderone{
         display: block;
     }
 
-    .lk-header-topbar.fixed a.btn-notify{
+    .lk-header-topbar.fixed a.btn-orderone{
         border-color: #333;
         color: #333;
     }
 
-    .lk-header-topbar.fixed a.btn-notify i{
+    .lk-header-topbar.fixed a.btn-orderone i{
         background-position: -30px -30px;
     }
 
-    .no-touch .lk-header-topbar.fixed a.btn-notify:hover{
+    .no-touch .lk-header-topbar.fixed a.btn-orderone:hover{
         background: #333;
         color: #fff;
     }
 
-    .no-touch .lk-header-topbar.fixed a.btn-notify:hover i{
+    .no-touch .lk-header-topbar.fixed a.btn-orderone:hover i{
         background-position: 0 -30px;
     }
 
-    .lk-bnr-details a.btn-notify{
+    .lk-bnr-details a.btn-orderone{
         display: none;
     }
 
     .lk-bnr-details{
         position: absolute;
         right: 0;
-        bottom: 200px;
+        bottom: 100px;
         width: 350px;
         font-size: 14px;
     }
@@ -865,12 +949,22 @@ a.btn-notify i{
     }
 
     .section-howitworks aside img.iphone{
-        max-width: 429px;
+        max-width: 470px;
         float: right;
         position: relative;
-        top: 0;
-        right: -50px;
+        bottom: 0;
+        right: 0;
     }
+
+    .lk-preorder-list li{
+        width: 33%;
+    }
+
+    .lk-preorder-list a{
+        display: inline-block;
+        width: 200px;
+    }
+
     .footer-bottom aside{
         text-align: left;
         float: left;
@@ -938,7 +1032,7 @@ a.btn-notify i{
     }
 
     .section-howitworks aside img.iphone{
-        top: 0;
+        bottom: 0;
         right: 0;
     }
 
