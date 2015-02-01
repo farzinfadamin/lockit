@@ -71,14 +71,51 @@ img {
 /* ==========================================================================
    Farzin Fadamin custom styles
    ========================================================================== */
-   
+
+@font-face {
+    font-family:'AvenirNext';
+    src: url('fonts/AvenirNext-Bold.eot');
+    src: url('fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AvenirNext-Bold.woff') format('woff'),
+         url('fonts/AvenirNext-Bold.ttf') format('truetype'),
+         url('fonts/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family:'AvenirNext';
+    src: url('fonts/AvenirNext-Medium.eot');
+    src: url('fonts/AvenirNext-Medium.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AvenirNext-Medium.woff') format('woff'),
+         url('fonts/AvenirNext-Medium.ttf') format('truetype'),
+         url('fonts/AvenirNext-Medium.svg#AvenirNext-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:'AvenirNext';
+    src: url('fonts/AvenirNext-Regular.eot');
+    src: url('fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/AvenirNext-Regular.woff') format('woff'),
+         url('fonts/AvenirNext-Regular.ttf') format('truetype'),
+         url('fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
 body {
-    font: 14px/26px "HelveticaNeueLight", "HelveticaNeue-Light", "Helvetica Neue Light", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
+    font-family: "AvenirNext", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 26px;
     font-weight:300;
     font-stretch:normal;
     background: #f7f7f7;
     color: #333;
     min-width: 320px;
+    font-weight: 400;
 }
 
 a:link,
@@ -206,7 +243,7 @@ a.btn-orderone i{
 .lk-bnr-details h2{
     margin: 0;
     font-size: 6.25em;
-    font-weight: 400;
+    font-weight: normal;
     text-transform: uppercase;
     line-height: 1;
 }
@@ -215,16 +252,14 @@ a.btn-orderone i{
     margin: 0 0 .8em;
     font-size: 2.2em;
     text-transform: uppercase;
-    font-weight:200;
-    font-stretch:normal;
-    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
 }
 
 .lk-bnr-details p{
     font-size: 1.4em;
-    font-weight: 200;
-    font-stretch: normal;
-    font-family: "HelveticaNeueThin", "HelveticaNeue-Thin", "Helvetica Neue Thin", "HelveticaNeue", "Helvetica Neue", 'TeXGyreHerosRegular', "Arial", sans-serif;
+}
+
+.lk-bnr-details b{
+    font-weight: 500;
 }
 
 .lk-bnr-details .lk-bnr-text{
@@ -490,7 +525,6 @@ a.btn-orderone i{
 
 .notification-box{
     background: #dcdcdc;
-    font-size: .875em;
     text-align: center;
     padding: 30px 0;
 }
@@ -730,21 +764,21 @@ a.btn-orderone i{
 
 
 .modal-notify{
-   background: rgba(0,0,0,.6);
-   position: fixed;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: 20;
-   visibility: hidden;
-   opacity: 0;
-   -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+ background: rgba(0,0,0,.6);
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 20;
+ visibility: hidden;
+ opacity: 0;
+ -webkit-transition: all .3s ease-in-out;
+ -moz-transition: all .3s ease-in-out;
+ -o-transition: all .3s ease-in-out;
+ transition: all .3s ease-in-out;
 }
 
 .modal-notify.show{
@@ -846,7 +880,7 @@ a.btn-orderone i{
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-@media only screen and (min-width: 768px){
+   @media only screen and (min-width: 768px){
 
     .lk-header,
     .lk-header-inner{
@@ -1133,7 +1167,6 @@ a.btn-orderone i{
 
     .lk-bnr-details p{
         font-size: 1.5625em;
-        font-weight: 300;
     }
     .notify-form{
         font-size: 16px;
@@ -1145,7 +1178,7 @@ a.btn-orderone i{
    Helper classes
    ========================================================================== */
 
-.ir {
+   .ir {
     background-color: transparent;
     border: 0;
     overflow: hidden;
@@ -1207,7 +1240,7 @@ a.btn-orderone i{
    Print styles
    ========================================================================== */
 
-@media print {
+   @media print {
     * {
         background: transparent !important;
         color: #000 !important;
