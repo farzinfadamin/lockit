@@ -72,13 +72,13 @@ img {
    Farzin Fadamin custom styles
    ========================================================================== */
 
-@font-face {
+   @font-face {
     font-family:'AvenirNext';
     src: url('fonts/AvenirNext-Bold.eot');
     src: url('fonts/AvenirNext-Bold.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AvenirNext-Bold.woff') format('woff'),
-         url('fonts/AvenirNext-Bold.ttf') format('truetype'),
-         url('fonts/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+    url('fonts/AvenirNext-Bold.woff') format('woff'),
+    url('fonts/AvenirNext-Bold.ttf') format('truetype'),
+    url('fonts/AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
     font-weight: 700;
     font-style: normal;
 }
@@ -88,9 +88,9 @@ img {
     font-family:'AvenirNext';
     src: url('fonts/AvenirNext-Medium.eot');
     src: url('fonts/AvenirNext-Medium.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AvenirNext-Medium.woff') format('woff'),
-         url('fonts/AvenirNext-Medium.ttf') format('truetype'),
-         url('fonts/AvenirNext-Medium.svg#AvenirNext-Medium') format('svg');
+    url('fonts/AvenirNext-Medium.woff') format('woff'),
+    url('fonts/AvenirNext-Medium.ttf') format('truetype'),
+    url('fonts/AvenirNext-Medium.svg#AvenirNext-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
 }
@@ -99,9 +99,9 @@ img {
     font-family:'AvenirNext';
     src: url('fonts/AvenirNext-Regular.eot');
     src: url('fonts/AvenirNext-Regular.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AvenirNext-Regular.woff') format('woff'),
-         url('fonts/AvenirNext-Regular.ttf') format('truetype'),
-         url('fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+    url('fonts/AvenirNext-Regular.woff') format('woff'),
+    url('fonts/AvenirNext-Regular.ttf') format('truetype'),
+    url('fonts/AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -675,9 +675,25 @@ a.btn-orderone i{
     padding: 30px 0;
 }
 
+.notify-form > div{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.notify-form > div > p{
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+}
+
+.notify-form > div > p:last-child{
+    margin-bottom: 0;
+}
+
 .notify-form input[type="text"],
-.notify-form input[type="email"]{
-    margin-top: 10px;
+.notify-form input[type="email"],
+.notify-form textarea{
     width: 100%;
     border: 1px solid #ddd;
     float: left;
@@ -685,21 +701,27 @@ a.btn-orderone i{
     height: 55px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
-    -webkit-border-radius: 5px 5px 0 0;
-    -moz-border-radius: 5px 5px 0 0;
-    border-radius: 5px 5px 0 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.notify-form textarea{
+    height: 120px;
+    resize: none;
 }
 
 .notify-form.error input[type="text"],
-.notify-form.error input[type="email"]{
+.notify-form.error input[type="email"],
+.notify-form.error textarea{
     background: #f8dddd;
     border-color: #edc0c0;
     color: #cc3333;
 }
 
 .notify-form button{
+    display: inline-block;
     width: 100%;
-    float: left;
     background: #39c;
     color: #fff;
     border: none;
@@ -707,17 +729,23 @@ a.btn-orderone i{
     padding: 10px 5px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
-    -webkit-border-radius: 0 0 5px 5px;
-    -moz-border-radius: 0 0 5px 5px;
-    border-radius: 0 0 5px 5px;
-}
-
-.no-touch .notify-form button:hover{
-    background: #278abb;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
     -webkit-transition: all 0.12s ease-in-out;
     -moz-transition: all 0.12s ease-in-out;
     -o-transition: all 0.12s ease-in-out;
     transition: all 0.12s ease-in-out;
+}
+
+.notify-form .notify-label{
+    padding: 10px 0;
+    display: inline-block;
+    text-align: center;
+}
+
+.no-touch .notify-form button:hover{
+    background: #278abb;
 }
 
 
@@ -796,7 +824,6 @@ a.btn-orderone i{
     left: 5%;
     right: 5%;
     top: 50%;
-    margin-top: -140px;
     box-shadow: 0 0 10px rgba(0,0,0,.6);
     -webkit-transition: all .15s ease-in-out;
     -moz-transition: all .15s ease-in-out;
@@ -804,10 +831,10 @@ a.btn-orderone i{
     transition: all .15s ease-in-out;
     visibility: hidden;
     opacity: 0;
-    -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -o-transform: scale(0);
-    transform: scale(0);
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
 }
 
 .modal-notify a.close{
@@ -832,10 +859,10 @@ a.btn-orderone i{
 }
 
 .modal-box.active{
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -o-transform: scale(1);
-    transform: scale(1);
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
     visibility: visible;
     opacity: 1;
     -webkit-transition: all .3s ease-in-out;
@@ -847,15 +874,14 @@ a.btn-orderone i{
 .modal-box.thankyou{
     height: 310px;
     top: 50%;
-    margin-top: -155px;
     background: url('../img/bg-bag.jpg') no-repeat -100px 0 #f7f7f7;
 }
 
 .modal-box.thankyou aside{
-    float: right;
-    margin-top: 10px;
-    margin-left: 100px;
-    text-align: left;
+  float: right;
+  padding: 10px;
+  text-align: left;
+  background: rgba(247, 247, 247, 0.85);
 }
 
 .modal-box.thankyou h2{
@@ -1026,22 +1052,6 @@ a.btn-orderone i{
         float: left;
     }
 
-    .notify-form input[type="text"],
-    .notify-form input[type="email"]{
-        margin-top: 0;
-        width: 70%;
-        -webkit-border-radius: 5px 0 0 5px;
-        -moz-border-radius: 5px 0 0 5px;
-        border-radius: 5px 0 0 5px;
-    }
-
-    .notify-form button{
-        width: 30%;
-        -webkit-border-radius: 0 5px 5px 0;
-        -moz-border-radius: 0 5px 5px 0;
-        border-radius: 0 5px 5px 0;
-    }
-
     .modal-notify .modal-box{
         width: 600px;
         left: 50%;
@@ -1049,12 +1059,31 @@ a.btn-orderone i{
         margin-left: -300px;
     }
 
+    .notify-form > div > p{
+        width: 50%;
+        padding-right: 5px;
+        margin: 0;
+    }
+
+    .notify-form > div > p:last-child{
+        padding-right: 0;
+        padding-left: 5px;
+        margin: 0;
+    }
+
+    .notify-form .btn-holder{
+        text-align: center;
+    }
+
+    .notify-form button{
+        width: 40%;
+    }
+
     .modal-box.thankyou{
         background-position: 0 0;
     }
 
     .modal-box.thankyou aside{
-        margin-top: 50px;
         margin-left: 250px;
     }
 }

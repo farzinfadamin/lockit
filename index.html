@@ -179,36 +179,49 @@
     </footer>
 </div>
 
-<div class="modal-notify">
+<div class="modal-notify show">
     <div class="modal-box get-email">
         <a href="#" class="close"></a>
         <section>
-            <p>Enter your email address to get information about how to pre-order your own Lockit</p>
+            <h2>We would love to hear from you</h2>
+            <p>If you have any questions, comments or concerns, please feel free to send us a message!</p>
 
-            <form 
-            action="http://fastenwear.us8.list-manage.com/subscribe/post?u=d8f13c500d02f9e54213ea529&amp;id=2b5eab3613"method="post" 
-            class="notify-form clearfix" 
-            target="_blank" 
-            >
+            <form action="http://fastenwear.us8.list-manage.com/subscribe/post?u=d8f13c500d02f9e54213ea529&amp;id=2b5eab3613"method="post" class="notify-form clearfix"  target="_blank" >
 
-            <input type="text" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;">
-                <input type="text" name="b_d8f13c500d02f9e54213ea529_2b5eab3613" tabindex="-1" value="">
-            </div>
-            <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">
-                Subscribe
-            </button>
+                <div>
+                    <p>
+                        <input type="text" value="" name="NAME" class="name" id="mce-NAME" placeholder="Full Name" required>
+                    </p>
+                    <p>
+                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                    </p>
+                </div>
+                <div>
+                    <textarea value="" name="MESSAGE" class="message" id="mce-MESSAGE" placeholder="Enter your message"></textarea>
+                </div>
+                <div>
+                    <label class="notify-label"><input type="checkbox" checked="checked" /> Update me with Lockit newsletter</label>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;">
+                    <input type="text" name="b_d8f13c500d02f9e54213ea529_2b5eab3613" tabindex="-1" value="">
+                </div>
+                <div class="btn-holder">
+                    <button type="submit" name="subscribe" id="mc-embedded-subscribe" class="button">
+                        Subscribe
+                    </button>
+                </div>
 
-        </form>
-    </section>
-</div>
-<div class="modal-box thankyou">
-    <a href="#" class="close"></a>
-    <section>
-        <aside>
-            <h2>Thank you</h2>
-            <p>You will be updated on our progress bringing the Lockit to you!
+            </form>
+        </section>
+    </div>
+    <div class="modal-box thankyou active">
+        <a href="#" class="close"></a>
+        <section>
+            <aside>
+                <h2>Thank you</h2>
+                <p>Your message has been successfully sent.</p>
+                <p>You will be updated on our progress bringing the Lockit to you!</p>
             </aside>
         </section>
     </div>
