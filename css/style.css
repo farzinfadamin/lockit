@@ -190,7 +190,7 @@ strong{
 a.btn-orderone{
     display: inline-block;
     border: 1px solid #fff;
-    padding: 12px 20px;
+    padding: 7px 20px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -242,7 +242,7 @@ a.btn-orderone i{
 
 .lk-bnr-details h2{
     margin: 0;
-    font-size: 6.25em;
+    font-size: 5.25em;
     font-weight: normal;
     text-transform: uppercase;
     line-height: 1;
@@ -254,8 +254,13 @@ a.btn-orderone i{
     text-transform: uppercase;
 }
 
+.lk-bnr-details p.lk-first-p{
+    font-size: 2em;
+}
+
 .lk-bnr-details p{
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-weight: 400;
 }
 
 .lk-bnr-details b{
@@ -263,11 +268,12 @@ a.btn-orderone i{
 }
 
 .lk-bnr-details .lk-bnr-text{
-    font-size: 3em;
-    text-transform: capitalize;
+    font-size: 2em;
     font-family: 'Allura', cursive;
+    font-weight: normal;
     position: relative;
-    margin-bottom: .5em;
+    margin: .5em auto;
+    width: 80%;
 }
 
 .lk-bnr-details .lk-bnr-text:before,
@@ -387,9 +393,10 @@ a.btn-orderone i{
 .lk-main-container h2{
     text-align: center;
     margin-bottom: 0;
-    font-size: 2.8125em;
+    font-size: 2.7em;
     font-weight: 300;
     line-height: 1.2;
+    white-space: nowrap;
 }
 
 .lk-main-container h4{
@@ -533,6 +540,12 @@ a.btn-orderone i{
     text-align: center;
 }
 
+.lk-online-ordering > h2{
+    font-weight: 400;
+    padding: 1em 0;
+    font-size: 2.7em;
+}
+
 .lk-preorder-list{
     margin: 20px auto;
     float: left;
@@ -553,7 +566,7 @@ a.btn-orderone i{
 
 .lk-preorder-list li figure{
     margin-bottom: 10px;
-    height: 190px;
+    height: 200px;
     position: relative;
 }
 
@@ -563,7 +576,7 @@ a.btn-orderone i{
     right: 0;
     bottom: 0;
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 500;
     color: #333;
 }
 
@@ -809,6 +822,10 @@ a.btn-orderone i{
  transition: all .3s ease-in-out;
 }
 
+.modal-notify.hide{
+    display: none;
+}
+
 .modal-notify.show{
     visibility: visible;
     opacity: 1;
@@ -981,8 +998,16 @@ a.btn-orderone i{
         position: absolute;
         right: 0;
         bottom: 100px;
-        width: 350px;
+        width: 400px;
         font-size: 14px;
+    }
+
+    .lk-bnr-details .lk-bnr-text{
+        width: 60%;
+    }
+
+    .lk-bnr-details p.lk-first-p{
+        font-size: 2.2em;
     }
 
     .lk-header .lk-handiphone{
@@ -990,7 +1015,7 @@ a.btn-orderone i{
         display: block;
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: -50px;
         -webkit-transform: translateY(642px);
         -moz-transform: translateY(642px);
         -o-transform: translateY(642px);
@@ -1194,9 +1219,6 @@ a.btn-orderone i{
         font-size: 2.8125em;
     }
 
-    .lk-bnr-details p{
-        font-size: 1.5625em;
-    }
     .notify-form{
         font-size: 16px;
     }

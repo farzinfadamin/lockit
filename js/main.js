@@ -1,9 +1,9 @@
 var lockit = function(){
 
   var 
-    $window,
-    $thankyou,
-    $modalBox;
+  $window,
+  $thankyou,
+  $modalBox;
 
   var mandrilInstance;
   
@@ -23,9 +23,9 @@ var lockit = function(){
 
       $window.on('scroll', function(){
        $window
-         .trigger('scroll.lazyload')
-         .trigger('touchmove.lazyload');
-      });
+       .trigger('scroll.lazyload')
+       .trigger('touchmove.lazyload');
+     });
 
       
       $('.notify-form').on('submit', function(e){ 
@@ -39,7 +39,7 @@ var lockit = function(){
     onScroll: function(){
 
       var scrollTop = $window.scrollTop(),
-          $sections = $('[class ^=section-]:not(.active)');
+      $sections = $('[class ^=section-]:not(.active)');
 
       if( ! $sections.length){
         $window.off('scroll.lazyload ,touchmove.lazyload');
@@ -60,7 +60,7 @@ var lockit = function(){
       var from = $.trim($(e.currentTarget).parents('form').find(':text').val());
       
       this.submitEmail( from );      
-    
+
     },
 
     submitEmail: function(from){
@@ -73,24 +73,24 @@ var lockit = function(){
 
       // create a variable for the API call parameters
       var params = {
-          message: {
-              from_email: from,
-              to: [{
-                email: to
-              }],
-              subject: "LockIt User Subscription",
-              text: from + " has Subscribed to LockIT"
-          }
+        message: {
+          from_email: from,
+          to: [{
+            email: to
+          }],
+          subject: "LockIt User Subscription",
+          text: from + " has Subscribed to LockIT"
+        }
       };
 
       mandrilInstance.messages.send(params, $.proxy(function(res) {
-      
-          this.emailSent();
-      
+
+        this.emailSent();
+
       }, this), $.proxy(function(err) {
 
-          this.invalidEmail();
-      
+        this.invalidEmail();
+
       }, this));
 
     },
@@ -124,35 +124,48 @@ $(document).ready(function(){
   $('.lk-bnr-details').addClass('show')
 
   $(window).bind('scroll', function() {
-      if ($(window).scrollTop() > 100) {
-        $('.lk-header-topbar').addClass('fixed');
-       }
-       else {
-         $('.lk-header-topbar').removeClass('fixed');
-       }
-    });
+    if ($(window).scrollTop() > 100) {
+      $('.lk-header-topbar').addClass('fixed');
+    }
+    else {
+     $('.lk-header-topbar').removeClass('fixed');
+   }
+ });
 
   var $modalBox = $('.modal-notify');
   var $closeBtn = $('.modal-box .close');
   var notifyEvent = 'click';
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
    notifyEvent = 'touchstart';
-  }
+ }
 
   /*$('.btn-notify').on(notifyEvent, function(){
     $modalBox.addClass('show');
     $modalBox.find('.get-email').addClass('active');
   })*/
 
-  $('.btn-orderone').on(notifyEvent, function(){
-    
-  })
+$('.btn-orderone').on(notifyEvent, function(){
 
-  $closeBtn.on(notifyEvent, function(){
-    $modalBox.removeClass('show');
-    $modalBox.children().removeClass('active');
-  });
+})
 
-  lockit.init();
+$closeBtn.on(notifyEvent, function(){
+  $modalBox.removeClass('show');
+  $modalBox.children().removeClass('active');
+});
+
+lockit.init();
+
+
+var $root = $('html, body');
+$('.btn-orderone').click(function() {
+    var href = $.attr(this, 'href');
+    $root.animate({
+        scrollTop: $(href).offset().top
+    }, 800, function () {
+        window.location.hash = href;
+    });
+    return false;
+});
+
 
 });
