@@ -65,7 +65,7 @@ var lockit = function(){
 
     submitEmail: function(from){
 
-      var to = 'info@fastenwear.com ';
+      var to = 'info@projectlockit.co ';
       if(! this.validateEmail(from) ){
         this.invalidEmail();
         return;
@@ -78,7 +78,7 @@ var lockit = function(){
           to: [{
             email: to
           }],
-          subject: "LockIt User Subscription",
+          subject: "LockIt User Contact Email",
           text: from + " has Subscribed to LockIT"
         }
       };
@@ -136,36 +136,32 @@ $(document).ready(function(){
   var $closeBtn = $('.modal-box .close');
   var notifyEvent = 'click';
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-   notifyEvent = 'touchstart';
- }
+    notifyEvent = 'touchstart';
+  }
 
-  /*$('.btn-notify').on(notifyEvent, function(){
-    $modalBox.addClass('show');
+  $('#contact-link').on(notifyEvent, function(){
+    $modalBox.removeClass('hide').addClass('show');
     $modalBox.find('.get-email').addClass('active');
-  })*/
+  })
 
-$('.btn-orderone').on(notifyEvent, function(){
+  $closeBtn.on(notifyEvent, function(){
+    $modalBox.removeClass('show').addClass('hide');
+    $modalBox.children().removeClass('active');
+  });
 
-})
-
-$closeBtn.on(notifyEvent, function(){
-  $modalBox.removeClass('show');
-  $modalBox.children().removeClass('active');
-});
-
-lockit.init();
+  lockit.init();
 
 
-var $root = $('html, body');
-$('.btn-orderone').click(function() {
+  var $root = $('html, body');
+  $('.btn-orderone').click(function() {
     var href = $.attr(this, 'href');
     $root.animate({
-        scrollTop: $(href).offset().top
+      scrollTop: $(href).offset().top
     }, 800, function () {
-        window.location.hash = href;
+      window.location.hash = href;
     });
     return false;
-});
+  });
 
 
 });
