@@ -139,12 +139,14 @@ $(document).ready(function(){
     notifyEvent = 'touchstart';
   }
 
-  $('#contact-link').on(notifyEvent, function(){
+  $('#contact-link').on(notifyEvent, function(e){
+    e.stopPropagation();
     $modalBox.removeClass('hide').addClass('show');
     $modalBox.find('.get-email').addClass('active');
   })
 
-  $closeBtn.on(notifyEvent, function(){
+  $closeBtn.on(notifyEvent, function(e){
+    e.stopPropagation();
     $modalBox.removeClass('show').addClass('hide');
     $modalBox.children().removeClass('active');
   });
