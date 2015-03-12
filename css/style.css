@@ -435,7 +435,7 @@ a.btn-orderone i{
     font-size: 1.5em;
     font-weight: 300;
     color: #888;
-    font-size: 300;
+    font-weight: 300;
 }
 
 .section-fashion aside{
@@ -725,6 +725,22 @@ a.btn-orderone i{
     padding: 30px 0;
 }
 
+.section-notify h2{
+    margin-bottom: 10px;
+    font-size: 2.7em;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.section-notify h3{
+    text-align: center;
+    margin: 0 0 1em;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #888;
+    font-weight: 300;
+}
+
 .notify-form > div{
     float: left;
     width: 100%;
@@ -754,6 +770,7 @@ a.btn-orderone i{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
 .notify-form textarea{
@@ -775,7 +792,7 @@ a.btn-orderone i{
     background: #39c;
     color: #fff;
     border: none;
-    height: 55px;
+    height: 40px;
     padding: 10px 5px;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: 300;
@@ -1182,18 +1199,16 @@ a.btn-orderone i{
         margin: 0 5px;
     }
 
-    .section-notify > section{
-        text-align: left;
-        width: 50%;
-        padding: 0 2%;
-        float: left;
-    }
-
     .modal-notify .modal-box{
         width: 600px;
         left: 50%;
         right: auto;
         margin-left: -300px;
+    }
+
+    .notify-form{
+        width: 50%;
+        margin: 0 auto;
     }
 
     .notify-form > div > p{
@@ -1212,8 +1227,21 @@ a.btn-orderone i{
         text-align: center;
     }
 
+    .notify-form input[type="text"]{
+        float: left;
+        width: 70%;
+        -webkit-border-radius: 5px 0 0 5px;
+        -moz-border-radius: 5px 0 0 5px;
+        border-radius: 5px 0 0 5px;
+    }
+
     .notify-form button{
-        width: 40%;
+        float: right;
+        width: 30%;
+        height: 55px;
+        -webkit-border-radius: 0 5px 5px 0;
+        -moz-border-radius: 0 5px 5px 0;
+        border-radius: 0 5px 5px 0;
     }
 
     .modal-box.get-email > section > p{
@@ -1335,23 +1363,23 @@ a.btn-orderone i{
 
 @media only screen and (min-width: 1200px) {
 
- .wrapper {
-    width: 1170px;
-    margin: 0 auto;
-}
+    .wrapper {
+        width: 1170px;
+        margin: 0 auto;
+    }
 
-.lk-bnr-details{
-    right: 100px;
-    width: 480px;
-}
+    .lk-bnr-details{
+        right: 100px;
+        width: 480px;
+    }
 
-.lk-bnr-details h3{
-    font-size: 2.8125em;
-}
+    .lk-bnr-details h3{
+        font-size: 2.8125em;
+    }
 
-.notify-form{
-    font-size: 16px;
-}
+    .notify-form{
+        font-size: 16px;
+    }
 
 }
 
