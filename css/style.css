@@ -264,7 +264,7 @@ a.btn-orderone i{
 .lk-bnr-details{
     margin-top: 30px;
     text-align: center;
-    text-shadow: 0 1px 2px rgba(0,0,0,.3);
+    text-shadow: 0 2px 3px rgba(0,0,0,.8);
 }
 
 .lk-bnr-details h2{
@@ -423,7 +423,7 @@ a.btn-orderone i{
 
 .lk-main-container h2{
     text-align: center;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     font-size: 2.7em;
     font-weight: 300;
     line-height: 1.2;
@@ -558,6 +558,28 @@ a.btn-orderone i{
 .section-comingsoon p{
     width: 70%;
     margin: 1em auto;
+}
+
+.section-signup{
+    background-color: #BCC6CC;
+}
+
+.section-signup hgroup{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section-signup h4{
+    color: #333;
+}
+
+.section-signup .widget-holder{
+    background: #fff;
+    padding: 10px;
+}
+
+.section-signup .bottom-area .widget-holder{
+    padding: 10px 0 10px 10px;
 }
 
 .notification-box{
@@ -818,7 +840,6 @@ a.btn-orderone i{
 
 .footer-bottom{
     padding: 30px 0;
-    border-top: 1px solid #ddd;
 }
 
 .footer-bottom aside{
@@ -845,6 +866,10 @@ a.btn-orderone i{
         background-image: url('../img/sprite@2x.png');
         background-size: 250px 230px;
     }
+}
+
+.footer-bottom nav{
+    text-align: center;
 }
 
 .footer-bottom nav a{
@@ -1189,11 +1214,6 @@ a.btn-orderone i{
         margin-left: 10px;
     }
 
-    .footer-bottom nav{
-        text-align: right;
-        float: right;
-    }
-
     .lk-footer .socials > *{
         display: inline-block;
         margin: 0 5px;
@@ -1338,8 +1358,23 @@ a.btn-orderone i{
         white-space: nowrap;
     }
 
-    .section-comingsoon h2{
+    .section-comingsoon h2,
+    .section-signup h2{
         text-align: center;
+    }
+
+    .section-signup .top-area,
+    .section-signup .bottom-area{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .section-signup .top-area .widget-holder{
+        padding: 25px 0 0;
+    }
+
+    .section-signup .bottom-area .widget-holder{
+        padding: 20px;
     }
 
     .left-side section{
