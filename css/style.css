@@ -561,7 +561,7 @@ a.btn-orderone i{
 }
 
 .section-signup{
-    background-color: #BCC6CC;
+    background-color: #DAE2E8;
 }
 
 .section-signup hgroup{
@@ -573,13 +573,10 @@ a.btn-orderone i{
     color: #333;
 }
 
-.section-signup .widget-holder{
-    background: #fff;
-    padding: 10px;
-}
-
 .section-signup .bottom-area .widget-holder{
     padding: 10px 0 10px 10px;
+    background: #fff;
+    padding: 10px;
 }
 
 .notification-box{
