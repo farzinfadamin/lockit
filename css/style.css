@@ -881,21 +881,21 @@ a.btn-orderone i{
 
 
 .modal-notify{
-   background: rgba(0,0,0,.6);
-   position: fixed;
-   width: 100%;
-   height: 100%;
-   top: 0;
-   left: 0;
-   right: 0;
-   bottom: 0;
-   z-index: 20;
-   visibility: hidden;
-   opacity: 0;
-   -webkit-transition: all .3s ease-in-out;
-   -moz-transition: all .3s ease-in-out;
-   -o-transition: all .3s ease-in-out;
-   transition: all .3s ease-in-out;
+ background: rgba(0,0,0,.6);
+ position: fixed;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ z-index: 20;
+ visibility: hidden;
+ opacity: 0;
+ -webkit-transition: all .3s ease-in-out;
+ -moz-transition: all .3s ease-in-out;
+ -o-transition: all .3s ease-in-out;
+ transition: all .3s ease-in-out;
 }
 
 .modal-notify.hide{
@@ -1182,6 +1182,23 @@ a.btn-orderone i{
         -moz-transform: translateY(0);
         -o-transform: translateY(0);
         transform: translateY(0);
+    }
+
+    .lk-header .lk-handiphone .widget-holder{
+        width: 238px;
+        position: absolute;
+        left: 160px;
+        top: 90px;
+        height: 155px;
+    }
+
+    .lk-header .widget-holder h3{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .lk-header .widget-holder h3 img{
+        display: inline-block;
     }
 
     .section-howitworks aside img.iphone{
