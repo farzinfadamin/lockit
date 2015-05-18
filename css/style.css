@@ -145,7 +145,7 @@ strong{
 .lk-header{
     background: url('../img/banner.jpg') no-repeat center center #000;
     background-size: cover;
-    height: 500px;
+    min-height: 500px;
     overflow: hidden;
     position: relative;
     color: #fff;
@@ -174,7 +174,7 @@ strong{
 
 .lk-header-inner{
     position: relative;
-    height: 500px;
+    min-height: 500px;
     padding-top: 120px;
 }
 
@@ -256,8 +256,20 @@ a.btn-orderone i{
     background-position: -30px -30px;
 }
 
-.lk-header-topbar a.btn-orderone,
-.lk-header .lk-handiphone{
+.lk-header-topbar a.btn-orderone{
+    display: none;
+}
+
+.lk-handiphone > img{
+    display: none;
+}
+
+.lk-header .widget-holder h3{
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.lk-header .widget-holder h3 img{
     display: none;
 }
 
@@ -1197,8 +1209,16 @@ a.btn-orderone i{
         margin-bottom: 30px;
     }
 
+    .lk-header .widget-holder h3 span{
+        display: none;
+    }
+
     .lk-header .widget-holder h3 img{
         display: inline-block;
+    }
+
+    .lk-handiphone > img{
+        display: block;
     }
 
     .section-howitworks aside img.iphone{
